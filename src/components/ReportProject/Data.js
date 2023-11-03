@@ -1,0 +1,23 @@
+export default [
+    {
+        id:1,
+        name:"bimbim",
+        date:"12312312",
+        img:"./ellipse-11@2x.png",
+        report:"asdasdasdasdsad", 
+    },
+    {
+        id:2,
+        name:"",
+        date:"",
+        img:"",
+        report:"", 
+    },
+    {
+        id:3,
+        name:"",
+        date:"",
+        img:"",
+        report:"", 
+    }
+]
