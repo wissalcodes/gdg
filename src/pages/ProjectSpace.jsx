@@ -17,7 +17,6 @@ const ProjectSpace = () => {
         <div className="relative">Create application template</div>
       </div>
       <img className="  w-24 h-9" alt="" src="/group-28.svg" />
-      {/* <CheckpointsForm /> */}
       <div className=" top-[877px] left-[266px] flex flex-row items-end justify-start gap-[24px]">
         <ReportProjectContainer />
       </div>
