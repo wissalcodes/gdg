@@ -1,52 +1,25 @@
-import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
+import "./App.css";
+import { Route, Routes, MemoryRouter } from "react-router-dom";
 import ProjectSpace from "./pages/ProjectSpace";
-
-function App() {
-  const action = useNavigationType();
-  const location = useLocation();
-  const pathname = location.pathname;
-
-  useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
-
-  useEffect(() => {
-    let title = "";
-    let metaDescription = "";
-
-    switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
-        break;
-    }
-
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
-  }, [pathname]);
-
+import DashboardContainer from "./components/Layout/DashboardContainer";
+export const Profile = {
+  user_name: "lead",
+  email: "lead@gmail.com",
+  role: "lead",
+  roles: [
+    "DevFest23",
+    "Community Voice",
+    "GDG Algiers Game Jam",
+    "Google IO Extended",
+    "Hashcode 21",
+  ],
+  img: "../assets/photo profil.png",
+};
+export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<ProjectSpace />} />
-    </Routes>
+    <div className="grid grid-cols-[20%,80%] justify-center items-center sm:flex-row w-screen">
+      <DashboardContainer />
+      <ProjectSpace />
+    </div>
   );
 }
-export default App;
