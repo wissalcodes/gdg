@@ -3,8 +3,8 @@ import Property1click from "./Property1click";
 const DashboardContainer = () => {
 
   return (
-    <div className="h-[980px] w-[1512px]  text-left text-[20px] text-black font-product-sans ">
-      <div className="absolute top-[39.59px] left-[0px] w-56 flex flex-col items-center justify-center gap-[17px] ">
+    <div className=" flex h-[980px] w-[1512px]  text-left text-[20px] text-black font-product-sans ">
+      <div className=" w-56 flex flex-col items-center justify-center gap-[17px] ">
         <img
           className="h-[30px] w-[56px]"
           alt=""
